@@ -20,12 +20,12 @@ How to install the package:
 
         pip install -e ./
 
-Note:
-        alpes: repository for encoding classes
+Folder structure:
+- alpes: repository for encoding classes
 
-        ieegNatureNeuro2026: repository for study definition.
-        
-        scratchieegNatureNeuro2026: repository for analysis script, data preprocessing and dataset generation
+- ieegNatureNeuro2026: repository for study definition.
+
+- scratchieegNatureNeuro2026: repository for analysis script, data preprocessing and dataset generation
         
 
     
@@ -37,15 +37,23 @@ Steps:
         cd ds005574
         datalad get ./sub-*
         datalad get ./stimuli/podcast.wav
-   Add the transcript annotation inside the dataset:
-        cp /path/to/package/features/transcript_withsentence.tsv /path/to/ds005574/stimuli/syntactic/transcript_withsentence.tsv
+        cp /path/to/package/features/transcript_withsentence.tsv /path/to/ds005574/stimuli/syntactic/transcript_withsentence.tsv 
+(The last line adds the transcript annotation inside the dataset)
 
 2) Run the data preprocessing script:
-First, change the path in scratchieegNatureNeuro2026/datasetGen/genPodcast.py to fit the path of the Podcast dataset on your machine
+First, change the path in
+        scratchieegNatureNeuro2026/datasetGen/genPodcast.py 
+
+to fit the path of the Podcast dataset on your machine
+
 Then:
+
         python scratchieegNatureNeuro2026/datasetGen/genPodcast.py
 
 # Encoding Analyses:
-3) Banded Ridge regression analysis:
+3) Banded Ridge regression analysis: run all scripts in scratchieegNatureNeuro2026/analysis
 
+4) Display the results: run the bestFit and modelComparison scripts in scratchieegNatureNeuro2026/display
+
+The output of these scripts will be saved in scratchieegNatureNeuro2026/figures and can be used to replicate the figures in the paper.
 
