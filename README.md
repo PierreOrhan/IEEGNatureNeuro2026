@@ -37,10 +37,15 @@ Then follow these steps:
 # Download and format the dataset:
 Steps:
 1) Download the dataset:
+
         datalad install https://github.com/OpenNeuroDatasets/ds005574.git
+
         cd ds005574
+
         datalad get ./sub-*
+
         datalad get ./stimuli/podcast.wav
+        
         cp /path/to/package/features/transcript_withsentence.tsv /path/to/ds005574/stimuli/syntactic/transcript_withsentence.tsv 
 (The last line adds the transcript annotation inside the dataset)
 
