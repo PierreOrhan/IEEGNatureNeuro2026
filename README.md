@@ -54,6 +54,8 @@ Then:
 
         python scratchieegNatureNeuro2026/datasetGen/genPodcast.py
 
+Typically, this will take about 30 minutes to run on a machine with 32GB RAM and 8 CPUs.
+
 # Encoding Analyses:
 3) Banded Ridge regression analysis: run all scripts in scratchieegNatureNeuro2026/analysis
 
@@ -61,3 +63,4 @@ Then:
 
 The output of these scripts will be saved in scratchieegNatureNeuro2026/figures and can be used to replicate the figures in the paper.
 
+The expected run time for these analyses is about 4 hours.
