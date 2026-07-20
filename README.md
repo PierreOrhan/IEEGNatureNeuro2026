@@ -8,6 +8,10 @@ Requirements:
 
     - neuralset: https://github.com/facebookresearch/neuroai
 
+The exact versions of the packages used to run the analyses are listed in the requirements.txt file. You can install them using pip:
+
+        pip install -r requirements.txt
+
 Hardware requirements:
 
     - 32GB RAM
