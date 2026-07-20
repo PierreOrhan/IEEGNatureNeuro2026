@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "IEEGNatureNeuro2026"
+version = "0.0.0"
+dependencies = [
+    "zarr<3.0.0",
+    "himalaya"]

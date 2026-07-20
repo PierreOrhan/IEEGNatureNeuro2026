@@ -1,0 +1,41 @@
+# Code to replicate the results of the Nature Neuroscience 2026 submission: "Tree-like neural codes for syntax in the human brain"
+
+Requirements:
+    - Python 3.12 with torch and cuda well setup.
+    - datalad: https://www.datalad.org/
+    - neuralset: https://github.com/facebookresearch/neuroai
+Hardware requirements:
+    - 32GB RAM
+    - 8 CPUs
+    - 1 GPU 
+
+How to install the package:
+        pip install -e ./
+
+Note:
+        alpes: repository for encoding classes
+        ieegNatureNeuro2026: repository for study definition.
+        scratchieegNatureNeuro2026: repository for analysis script, data preprocessing and dataset generation
+        
+
+    
+Then follow these steps:
+# Download and format the dataset:
+Steps:
+1) Download the dataset:
+        datalad install https://github.com/OpenNeuroDatasets/ds005574.git
+        cd ds005574
+        datalad get ./sub-*
+        datalad get ./stimuli/podcast.wav
+   Add the transcript annotation inside the dataset:
+        cp /path/to/package/features/transcript_withsentence.tsv /path/to/ds005574/stimuli/syntactic/transcript_withsentence.tsv
+
+2) Run the data preprocessing script:
+First, change the path in scratchieegNatureNeuro2026/datasetGen/genPodcast.py to fit the path of the Podcast dataset on your machine
+Then:
+        python scratchieegNatureNeuro2026/datasetGen/genPodcast.py
+
+# Encoding Analyses:
+3) Banded Ridge regression analysis:
+
+
