@@ -45,15 +45,11 @@ Steps:
         datalad get ./sub-*
 
         datalad get ./stimuli/podcast.wav
-        
+
         cp /path/to/package/features/transcript_withsentence.tsv /path/to/ds005574/stimuli/syntactic/transcript_withsentence.tsv 
 (The last line adds the transcript annotation inside the dataset)
 
-2) Run the data preprocessing script:
-First, change the path in
-        scratchieegNatureNeuro2026/datasetGen/genPodcast.py 
-
-to fit the path of the Podcast dataset on your machine
+2) Run the data preprocessing script: First, change the path in scratchieegNatureNeuro2026/dataloc.py to fit the path of the Podcast dataset on your machine.
 
 Then:
 
